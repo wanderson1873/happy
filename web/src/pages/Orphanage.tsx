@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React from "react";
 import { FiClock, FiInfo } from "react-icons/fi";
 import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import { useParams } from "react-router-dom";
@@ -22,20 +22,21 @@ interface Orphanage {
     url: string;
   }>
 }
+
 interface OrphanageParams {
   id: string;
 }
 
 export default function Orphanage() {
   const params = useParams<OrphanageParams>();
-  const [orphanage, setOrphanage] = useState<Orphanage>( );
-  const [activeImageIndex, setActiveImageIndex] = useState(0);
+  const [orphanage, setOrphanage] = React.useState<Orphanage>( );
+  const [activeImageIndex, setActiveImageIndex] = React.useState(0);
 
-  useEffect(()=>{
+  React.useEffect(()=>{
     api.get(`orphanages/${params.id}`).then(response => {
       setOrphanage(response.data);
     })
-  },[params.id]);
+  }, [params.id]);
 
   if(!orphanage) {
     return (
@@ -53,13 +54,13 @@ export default function Orphanage() {
           <img src={orphanage.images[activeImageIndex].url} alt={orphanage.name} />
 
           <div className="images">
-            {orphanage.images.map((image, idx) => {
+            {orphanage.images.map((image, index) => {
               return (
                 <button 
                   key={image.id} 
-                  className={activeImageIndex === idx ? "active" : ""} 
+                  className={activeImageIndex === index ? "active" : ""} 
                   type="button"
-                  onClick={() => setActiveImageIndex(idx)}
+                  onClick={() => setActiveImageIndex(index)}
                   >
                   <img src={image.url} alt={orphanage.name} />
                 </button>
@@ -68,8 +69,8 @@ export default function Orphanage() {
           </div>
           
           <div className="orphanage-details-content">
-            <h1>{orphanage?.name}</h1>
-            <p>{orphanage?.about}</p>
+            <h1>{orphanage.name}</h1>
+            <p>{orphanage.about}</p>
 
             <div className="map-container">
               <MapContainer 
@@ -83,7 +84,7 @@ export default function Orphanage() {
                 doubleClickZoom={false}
               >
                 <TileLayer 
-                  url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                  url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAP_TOKEN}`}
                 />
                 <Marker interactive={false} icon={mapIcon} position={[orphanage.latitude, orphanage.longitude]} />
               </MapContainer>
