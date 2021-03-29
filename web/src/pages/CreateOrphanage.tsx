@@ -1,4 +1,4 @@
-import React, { useState, FormEvent, ChangeEvent } from "react";
+import React, { FormEvent, ChangeEvent } from "react";
 import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
 import { useHistory } from "react-router-dom";
@@ -12,18 +12,16 @@ import api from "../services/api";
 
 export default function CreateOrphanage() {
   const history = useHistory();
-  const [position, setPosition] = useState({ latitude: 0, longitude: 0})
 
-  const [name, setName] = useState('');
-  const [about, setAbout] = useState('');
-  const [instructions, setInstructions] = useState('');
-  const [opening_hours, setOpening_hours] = useState('');
-  const [open_on_weekends, setOpen_on_weekends] = useState(true);
-  const [images, setImages] = useState<File[]>([]);
-  const [previewImage, setPreviewImage] = useState<string[]>([]);
+  const [position, setPosition] = React.useState({ latitude: 0, longitude: 0})
+  const [name, setName] = React.useState('');
+  const [about, setAbout] = React.useState('');
+  const [instructions, setInstructions] = React.useState('');
+  const [opening_hours, setOpening_hours] = React.useState('');
+  const [open_on_weekends, setOpen_on_weekends] =React. useState(true);
+  const [images, setImages] = React.useState<File[]>([]);
+  const [previewImage, setPreviewImage] = React.useState<string[]>([]);
 
-  // Selecionar um ponto no map
-  // --------------------------------------------------------------------
   function handlerMapClick(event: LeafletMouseEvent) {
     const {lat, lng} = event.latlng;
     setPosition({
@@ -98,10 +96,10 @@ export default function CreateOrphanage() {
               center={[-27.2092052,-49.6401092]} 
               style={{ width: '100%', height: 280 }}
               zoom={15}
-              onclick={handlerMapClick}
+              onClick={handlerMapClick}
             >
               <TileLayer 
-                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                url={`https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAP_TOKEN}`}
               />
 
               {position.latitude !== 0 && 
