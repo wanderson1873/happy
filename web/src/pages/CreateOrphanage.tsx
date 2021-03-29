@@ -1,5 +1,5 @@
 import React, { useState, FormEvent, ChangeEvent } from "react";
-import { Map, Marker, TileLayer } from 'react-leaflet';
+import { MapContainer, Marker, TileLayer } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
 import { useHistory } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
@@ -94,7 +94,7 @@ export default function CreateOrphanage() {
           <fieldset>
             <legend>Dados</legend>
 
-            <Map 
+            <MapContainer 
               center={[-27.2092052,-49.6401092]} 
               style={{ width: '100%', height: 280 }}
               zoom={15}
@@ -114,7 +114,7 @@ export default function CreateOrphanage() {
                 />
               }
 
-            </Map>
+            </MapContainer>
 
             <div className="input-block">
               <label htmlFor="name">Nome</label>

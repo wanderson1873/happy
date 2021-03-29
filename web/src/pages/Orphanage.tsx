@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { FiClock, FiInfo } from "react-icons/fi";
-import { Map, Marker, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import { useParams } from "react-router-dom";
 
 import Sidebar from "../components/Sidebar";
@@ -72,7 +72,7 @@ export default function Orphanage() {
             <p>{orphanage?.about}</p>
 
             <div className="map-container">
-              <Map 
+              <MapContainer 
                 center={[orphanage.latitude, orphanage.longitude]} 
                 zoom={16} 
                 style={{ width: '100%', height: 280 }}
@@ -86,7 +86,7 @@ export default function Orphanage() {
                   url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
                 />
                 <Marker interactive={false} icon={mapIcon} position={[orphanage.latitude, orphanage.longitude]} />
-              </Map>
+              </MapContainer>
 
               <footer>
                 {/* <a href="https://www.google.com/maps/dir/?api=1&origin=34.1030032,-118.41046840000001&destination=34.059808,-118.368152">Ver rotas no Google Maps</a> */}
