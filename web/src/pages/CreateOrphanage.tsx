@@ -1,6 +1,6 @@
-import React, { FormEvent, ChangeEvent } from "react";
-import { MapContainer, Marker, TileLayer } from 'react-leaflet';
-import { LeafletMouseEvent } from 'leaflet';
+import React from "react";
+import { MapContainer, Marker, TileLayer, useMapEvents } from 'react-leaflet';
+import { LeafletMouseEvent  } from 'leaflet';
 import { useHistory } from "react-router-dom";
 import { FiPlus } from "react-icons/fi";
 
@@ -22,13 +22,20 @@ export default function CreateOrphanage() {
   const [images, setImages] = React.useState<File[]>([]);
   const [previewImage, setPreviewImage] = React.useState<string[]>([]);
 
-  function handlerMapClick(event: LeafletMouseEvent) {
-    const {lat, lng} = event.latlng;
-    setPosition({
-      latitude: lat,
-      longitude: lng,
+  function SetViewOnClick() {
+    useMapEvents({
+      click(event: LeafletMouseEvent) {
+        const {lat, lng} = event.latlng
+        setPosition({
+          latitude: lat,
+          longitude: lng
+        })
+      }
+      
     })
+    return null
   }
+
   // Deletar imagem selecionadas
   // --------------------------------------------------------------------
   function handleDeleteImage(idx: number) {
@@ -41,7 +48,7 @@ export default function CreateOrphanage() {
   }
   // Abrir janela para selecionar imagens
   // --------------------------------------------------------------------
-  function handlerSelectImage(event: ChangeEvent<HTMLInputElement>) {
+  function handlerSelectImage(event: React.ChangeEvent<HTMLInputElement>) {
     // Se não selecionar nenhum imagem
     if(!event.target.files) { return; }
     // Transforma as imagens selecinadas em uma array de images
@@ -56,7 +63,7 @@ export default function CreateOrphanage() {
   }
   // Gravando os dados fornecidos no formulário
   // --------------------------------------------------------------------
-  async function handlerSubmit(event: FormEvent ) {
+  async function handlerSubmit(event: React.FormEvent ) {
     event.preventDefault();
 
     try {
@@ -92,15 +99,17 @@ export default function CreateOrphanage() {
           <fieldset>
             <legend>Dados</legend>
 
-            <MapContainer 
-              center={[-27.2092052,-49.6401092]} 
+            <MapContainer
+              center={[38.5232109,-8.8899816]} 
               style={{ width: '100%', height: 280 }}
               zoom={15}
-              // onClick={handlerMapClick}
-            >
-              <TileLayer 
+              
+              >
+              <TileLayer  
                 url={`https://api.mapbox.com/styles/v1/mapbox/dark-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAP_TOKEN}`}
               />
+
+              <SetViewOnClick  />
 
               {position.latitude !== 0 && 
                 <Marker 
