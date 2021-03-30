@@ -1,4 +1,4 @@
-# Proffy
+# Happy
 
 <p>
   <img src="https://img.shields.io/badge/made%20by-Wanderson%20Oliveira-04D361?style=flat-square">
@@ -16,7 +16,7 @@
 
 ## Tópicos 
 
-[Sobre o Proffy](#sobre-o-proffy)
+[Sobre o Happy](#sobre-o-proffy)
 
 [Tecnologias](#tecnologias)
 
@@ -26,7 +26,7 @@
 
 <br>
 
-## Sobre o Proffy
+## Sobre o Happy
 
 Proffy é uma aplicação Mobile e Web com o objetivo de conectar alunos e professores. Esta aplicação oferece aos professores a possibilidade de registrar aulas, podendo adicionar informações como a disciplina, custo por hora e horários disponíveis. E aos alunos a possibilidade de buscar pelas aulas cadastradas.
 
@@ -40,69 +40,76 @@ O Proffy foi desenvolvida durante a #NLW2 (Next Level Week 2º Edição) da [Roc
 
 ## Tecnologias
 
-As seguintes tecnologias foram utilizadas no desenvolvimento do projeto:
+- **Web**
+  - [React](https://reactjs.org/)
+  - [Typescript](https://www.typescriptlang.org/)
+  - [Leaflet](https://leafletjs.com/)
+  - [React Leaflet](https://react-leaflet.js.org/)
+  - [Open Street Map](https://www.openstreetmap.org/) ou [Mapbox](https://www.mapbox.com/)
+  - [Framer Motion](https://www.framer.com/motion/)
 
-- [TypeScript](https://www.typescriptlang.org/)
-- [React](https://reactjs.org/)
-- [React Native](https://reactnative.dev/)
-- [Expo](https://expo.io/)
-- [Node](https://nodejs.org/en/)
-- [Express](https://expressjs.com/)
-- [SQLite3](https://www.sqlite.org/index.html)
-- [Knex](http://knexjs.org/)
-
-<br>
-
-## Instalação e uso
-
-### API (Back-end)
-
-```bash
-# Abra um terminal e copie este repositório com o comando
-$ git clone https://github.com/wanderson1873/proffy.git
-# ou use a opção de download.
-
-# Entre na pasta server 
-$ cd proffy/server
-
-# Instale as dependências
-$ yarn install
-
-# Rode o servidor
-$ yarn start
-```
+- **Backend**
+  - [Nodejs](https://nodejs.org/en/)
+  - [Express](https://expressjs.com/) 
+  - [Typeorm](https://typeorm.io/)
+  - [Multer](https://github.com/expressjs/multer)
+  - [Yup](https://github.com/jquense/yup)
 
 <br>
 
-### Web (Front-end)
+## Instalação e Uso
+ste repositório é um monorepo, portanto, manterá os fontes do projeto **Web**, **API** e **Mobile**. Cada parte do projeto tem suas dependências e é necessário instala-las individualmente antes da execução, para isso certifique-se de que tenha [NPM](https://www.npmjs.com/) ou [YARN](https://yarnpkg.com/) instalado em seu ambiente, além, é claro, o repositório clonado em seu ambiente.
+
+
+Clone o repositório com:
 
 ```bash
-# Entre na pasta web com 
-$ cd proffy/web
-
-# Instale as dependências
-$ yarn install
-
-# Rode o aplicação
-$ yarn start
+> git clone https://github.com/wanderon1873/happy.git
 ```
+
+As demonstrações utilizam **YARN** por padronização, mas, caso use **NPM**, basta substituir onde estiver escrito `yarn` por `npm`.
+
+### Instalando dependências do projeto web:
+
+```bash
+> cd happy/web
+> yarn install
+```
+
+Para executar o projeto **web** completo é necessário ter um **token** de autenticação da API do Mapbox. Acesse sua conta no [site](https://www.mapbox.com/) e crie um token para ser utilizado no projeto. Com o token em mãos, crie um arquivo `.env` e coloque seu token como valor da chave `REACT_APP_MAP_TOKEN`.
+
+Exemplo:
+
+```text
+REACT_APP_MAP_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
+
+Agora starte o projeto em seu ambiente com:
+
+```bash
+> yarn start
+```
+
+Acesse: [`http://127.0.0.1:3000/`](http://127.0.0.1:3000/) para visualizar.
 
 <br>
 
-### Mobile (App)
+### Instalando dependências do projeto backend:
 
 ```bash
-# Entre na pasta mobile com 
-$ cd proffy/mobile
-
-# Instale as dependências
-$ yarn install
-
-# Rode o app
-$ yarn start
-
-# Escaneie o QR Code exibido na janela do navegador.
+> cd happy/backend
+> yarn install
 ```
+
+Para executar o projeto **backend** é necessário criar o banco de dados com todas as tabelas utilizadas, para isso, use no diretório correspondente:
+
+```bash
+> yarn typeorm migration:run
+> yarn dev
+```
+
+Acesse: [`http://127.0.0.1:3333/`](http://127.0.0.1:3333/) para visualizar.
+
 
 <br>
 
