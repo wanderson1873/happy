@@ -1,6 +1,10 @@
 # Happy
 
-<img align="center" src=".github/logo.svg">
+<img align="center" src=".github/capa_happy.png">
+
+<br>
+<br>
+<br>
 
 <p>
   <img src="https://img.shields.io/badge/made%20by-Wanderson%20Oliveira-04D361?style=flat-square">
