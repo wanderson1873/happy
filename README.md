@@ -1,22 +1,24 @@
 # Happy
 
+<img align="center" src=".github/logo.svg">
+
 <p>
   <img src="https://img.shields.io/badge/made%20by-Wanderson%20Oliveira-04D361?style=flat-square">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/wanderson1873/proffy?color=04D361&style=flat-square">
-  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/wanderson1873/proffy?color=04D361&style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/wanderson1873/happy?color=04D361&style=flat-square">
+  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/wanderson1873/happy?color=04D361&style=flat-square">
   <a href="https://opensource.org/licenses/MIT">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-04D361?style=flat-square">
   </a>
-  <a href="https://github.com/martins-rafael/proffy/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wanderson1873/proffy?color=04D361&style=flat-square">
+  <a href="https://github.com/martins-rafael/happy/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wanderson1873/happy?color=04D361&style=flat-square">
   </a>
 </p>
 
-<img align="right" src="web/src/assets/images/landing.svg?raw=true" width="35%" alt="Proffy">
+<img align="right" src="web/src/images/landing.svg?raw=true" width="35%" alt="Happy">
 
 ## Tópicos 
 
-[Sobre o Happy](#sobre-o-proffy)
+[Sobre o Happy](#sobre-o-happy)
 
 [Tecnologias](#tecnologias)
 
@@ -30,7 +32,7 @@
 
 Proffy é uma aplicação Mobile e Web com o objetivo de conectar alunos e professores. Esta aplicação oferece aos professores a possibilidade de registrar aulas, podendo adicionar informações como a disciplina, custo por hora e horários disponíveis. E aos alunos a possibilidade de buscar pelas aulas cadastradas.
 
-O Proffy foi desenvolvida durante a #NLW2 (Next Level Week 2º Edição) da [Rocketseat](https://rocketseat.com.br/).
+O Happy foi desenvolvida durante a #NLW3 (Next Level Week 3º Edição) da [Rocketseat](https://rocketseat.com.br/).
 
 <br>
 
