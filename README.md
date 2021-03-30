@@ -9,7 +9,7 @@
   <a href="https://opensource.org/licenses/MIT">
     <img alt="License" src="https://img.shields.io/badge/license-MIT-04D361?style=flat-square">
   </a>
-  <a href="https://github.com/martins-rafael/happy/commits/master">
+  <a href="https://github.com/wanderson1873/happy/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wanderson1873/happy?color=04D361&style=flat-square">
   </a>
 </p>
