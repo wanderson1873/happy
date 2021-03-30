@@ -4,7 +4,6 @@
 
 <br>
 <br>
-<br>
 
 <p>
   <img src="https://img.shields.io/badge/made%20by-Wanderson%20Oliveira-04D361?style=flat-square">
@@ -34,31 +33,30 @@
 
 ## Sobre o Happy
 
-Proffy é uma aplicação Mobile e Web com o objetivo de conectar alunos e professores. Esta aplicação oferece aos professores a possibilidade de registrar aulas, podendo adicionar informações como a disciplina, custo por hora e horários disponíveis. E aos alunos a possibilidade de buscar pelas aulas cadastradas.
+Happy é uma aplicação Web com o objetivo de conectar Pessoas a Orfanatos infantis. Essa aplicação oferece aos Orfanatos a possibilidade de cadastrar seus respectivos dados, tais como: nome, endereço, descrição, horário de funcionamento e imagens do local. As pessoas tem a possibilidade de visualizar no map os endereços e detalhes dos orfanatos.
 
 O Happy foi desenvolvida durante a #NLW3 (Next Level Week 3º Edição) da [Rocketseat](https://rocketseat.com.br/).
 
 <br>
 
 <p align="center">
-  <img src=".github/mockup.png" alt="Página inicial">
+  <img src=".github/device.png" alt="Página inicial">
 </p>
 
 ## Tecnologias
 
 - **Web**
-  - [React](https://reactjs.org/)
+  - [ReactJS](https://reactjs.org/)
   - [Typescript](https://www.typescriptlang.org/)
   - [Leaflet](https://leafletjs.com/)
   - [React Leaflet](https://react-leaflet.js.org/)
   - [Open Street Map](https://www.openstreetmap.org/) ou [Mapbox](https://www.mapbox.com/)
-  - [Framer Motion](https://www.framer.com/motion/)
 
 - **Backend**
-  - [Nodejs](https://nodejs.org/en/)
+  - [Node.JS](https://nodejs.org/en/)
+  - [SQLite3](https://www.sqlite.org/index.html)
   - [Express](https://expressjs.com/) 
   - [Typeorm](https://typeorm.io/)
-  - [Multer](https://github.com/expressjs/multer)
   - [Yup](https://github.com/jquense/yup)
 
 <br>
