@@ -1,131 +1,77 @@
+<div align="center">
+
+<img src=".github/capa_happy.png" alt="Happy" width="100%">
+
 # Happy
 
-<img align="center" src=".github/capa_happy.png">
+[![Learning project](https://img.shields.io/badge/📚_learning_project-Rocketseat_NLW_%233_·_2021-2563EB?style=for-the-badge)](https://rocketseat.com.br/)
 
-<br>
-<br>
+**A web app that puts children's orphanages on a map so people can find them and schedule a visit.**
 
-<p>
-  <img src="https://img.shields.io/badge/made%20by-Wanderson%20Oliveira-04D361?style=flat-square">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/wanderson1873/happy?color=04D361&style=flat-square">
-  <img alt="GitHub Top Language" src="https://img.shields.io/github/languages/top/wanderson1873/happy?color=04D361&style=flat-square">
-  <a href="https://opensource.org/licenses/MIT">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-04D361?style=flat-square">
-  </a>
-  <a href="https://github.com/wanderson1873/happy/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wanderson1873/happy?color=04D361&style=flat-square">
-  </a>
-</p>
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=61DAFB)
+![Leaflet](https://img.shields.io/badge/Leaflet-199900?style=flat-square&logo=leaflet&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white)
+![Express](https://img.shields.io/badge/Express-000000?style=flat-square&logo=express&logoColor=white)
+![TypeORM](https://img.shields.io/badge/TypeORM-FE0803?style=flat-square&logo=typeorm&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 
-<img align="right" src="web/src/images/landing.svg?raw=true" width="35%" alt="Happy">
-
-## Tópicos 
-
-[Sobre o Happy](#sobre-o-happy)
-
-[Tecnologias](#tecnologias)
-
-[Instalação e uso](#instalação-e-uso)
-
-[Licença](#licença)
-
-<br>
-
-## Sobre o Happy
-
-Happy é uma aplicação Web com o objetivo de conectar Pessoas a Orfanatos infantis. Essa aplicação oferece aos Orfanatos a possibilidade de cadastrar seus respectivos dados, tais como: nome, endereço, descrição, horário de funcionamento e imagens do local. As pessoas tem a possibilidade de visualizar no map os endereços e detalhes dos orfanatos.
-
-O Happy foi desenvolvida durante a #NLW3 (Next Level Week 3º Edição) da [Rocketseat](https://rocketseat.com.br/).
-
-<br>
-
-<p align="center">
-  <img src=".github/device.png" alt="Página inicial">
-</p>
-
-## Tecnologias
-
-- **Web**
-  - [ReactJS](https://reactjs.org/)
-  - [Typescript](https://www.typescriptlang.org/)
-  - [Leaflet](https://leafletjs.com/)
-  - [React Leaflet](https://react-leaflet.js.org/)
-  - [Open Street Map](https://www.openstreetmap.org/) ou [Mapbox](https://www.mapbox.com/)
-
-- **Backend**
-  - [Node.JS](https://nodejs.org/en/)
-  - [SQLite3](https://www.sqlite.org/index.html)
-  - [Express](https://expressjs.com/) 
-  - [Typeorm](https://typeorm.io/)
-  - [Yup](https://github.com/jquense/yup)
-
-<br>
-
-## Instalação e Uso
-Cada parte do projeto tem suas dependências e é necessário instala-las individualmente antes da execução, para isso certifique-se de que tenha [NPM](https://www.npmjs.com/) ou [YARN](https://yarnpkg.com/) instalado em seu ambiente, além, é claro, o repositório clonado em seu ambiente.
-
-
-Clone o repositório com:
-
-```bash
-> git clone https://github.com/wanderon1873/happy.git
-```
-
-As demonstrações utilizam **YARN** por padronização, mas, caso use **NPM**, basta substituir onde estiver escrito `yarn` por `npm`.
-
-### Instalando dependências do projeto web:
-
-```bash
-> cd happy/web
-> yarn install
-```
-
-Para executar o projeto **web** completo é necessário ter um **token** de autenticação da API do Mapbox. Acesse sua conta no [site](https://www.mapbox.com/) e crie um token para ser utilizado no projeto. Com o token em mãos, crie um arquivo `.env` e coloque seu token como valor da chave `REACT_APP_MAP_TOKEN`.
-
-Exemplo:
-
-```text
-REACT_APP_MAP_TOKEN=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-```
-
-Agora starte o projeto em seu ambiente com:
-
-```bash
-> yarn start
-```
-
-Acesse: [`http://127.0.0.1:3000/`](http://127.0.0.1:3000/) para visualizar.
-
-<br>
-
-### Instalando dependências do projeto backend:
-
-```bash
-> cd happy/backend
-> yarn install
-```
-
-Para executar o projeto **backend** é necessário criar o banco de dados com todas as tabelas utilizadas, para isso, use no diretório correspondente:
-
-```bash
-> yarn typeorm migration:run
-> yarn dev
-```
-
-Acesse: [`http://127.0.0.1:3333/`](http://127.0.0.1:3333/) para visualizar.
-
-
-<br>
-
-## Licença
-<a href="https://opensource.org/licenses/MIT">
-    <img alt="License" src="https://img.shields.io/badge/license-MIT-04D361?style=flat-square">
-</a>
-
-<br>
-
-Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](/LICENSE) para mais detalhes.
+</div>
 
 ---
 
-Feito com :purple_heart: by [Wanderson Oliveira](https://github.com/wanderson1873)
+## 📌 About
+
+Orphanages register their address, opening hours, visiting rules and photos. Visitors browse them on an interactive map and open each one to see the details and get directions.
+
+Built during Rocketseat's **Next Level Week #3**, a one-week hands-on bootcamp.
+
+<div align="center">
+  <img src=".github/device.png" alt="Happy on desktop and mobile" width="85%">
+</div>
+
+## 🧠 What I practiced
+
+- **A REST API in TypeScript** with Express, TypeORM migrations and SQLite, including image uploads with Multer and validation with Yup.
+- **Maps in React** with Leaflet and Mapbox tiles: custom markers, popups and picking a location by clicking on the map.
+- **A full-stack flow**: a multi-page React front end (map, details, create form) talking to my own API, with typed models on both sides.
+
+## 🚀 Run locally
+
+You need Node.js and Yarn (or npm).
+
+```bash
+git clone https://github.com/wanderson1873/happy.git
+```
+
+**Backend** (runs on `http://localhost:3333`):
+
+```bash
+cd happy/backend
+yarn install
+yarn typeorm migration:run
+yarn dev
+```
+
+**Web** (runs on `http://localhost:3000`): create `web/.env` with a [Mapbox](https://www.mapbox.com/) token as `REACT_APP_MAP_TOKEN=your-token`, then:
+
+```bash
+cd happy/web
+yarn install
+yarn start
+```
+
+---
+
+<div align="center">
+
+**Wanderson Oliveira** · Websites & AI solutions that bring businesses more customers
+
+[![derson.cloud](https://img.shields.io/badge/derson.cloud-2563EB?style=flat-square&logo=googlechrome&logoColor=white)](https://derson.cloud)
+[![Email](https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:wanderson1873@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/wanderson1873/)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=flat-square&logo=whatsapp&logoColor=white)](https://wa.me/17816664150)
+
+<sub>Released under the [MIT License](LICENSE).</sub>
+
+</div>
